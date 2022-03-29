@@ -1,3 +1,3 @@
 # project2
 
-Need to make a uploads folder in the project2 directory!
+Placeholder is in the uploads folder so the upload folder is visable here on GitHub
