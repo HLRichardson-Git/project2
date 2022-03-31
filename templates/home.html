@@ -1,5 +1,48 @@
 {% extends 'base.html' %}
+
 {% block title %}{% endblock %}
+
 {% block body %}
-home
+<div>
+    <div>
+        <div class = "home-left">
+            <img src = "static/images/skate.jpg" alt = "skater boy" class = "home-left-image">
+        </div>
+        <div class = "home-right-top">
+            <h1>Join our unique group<br>and become a member of our family.</h1>
+            <form action="http://localhost:5000/upload">
+                <input class = "apply-button" type="submit" value="Apply now >>" />
+            </form>
+        </div>
+        <div class = "home-right-bottom">
+            <h3>Available Jobs:</h3>
+            <div class = "card-container">
+                <div class = "cards">
+                    <div class = "card-image">
+                        <img src = "static/images/graphs.png" alt = "graph">
+                    </div>
+                    <div class = "card-content">
+                        <h4>Graphs</h4>
+                    </div>
+                </div>
+                <div class = "cards">
+                    <div class = "card-image">
+                        <img src = "static/images/rocket.png" alt = "graph">
+                    </div>
+                    <div class = "card-content">
+                        <h4>Astronaut</h4>
+                    </div>
+                </div>
+                <div class = "cards">
+                    <div class = "card-image">
+                        <img src = "static/images/archer.png" alt = "graph">
+                    </div>
+                    <div class = "card-content">
+                        <h4>Archer</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
