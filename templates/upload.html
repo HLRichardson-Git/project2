@@ -1,9 +1,41 @@
 {% extends 'base.html' %}
+
 {% block title %}{% endblock %}
+
 {% block body %}
-    <form action="/upload" method="POST" enctype="multipart/form-data">
-        <input type="file" name="file"/>
-        <input type="submit"/>
-    </form>
+    <div class = "upload-container">
+        <div class = "upload-content">
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <div class = "file-selector">
+                    <input type="file" name="file" id = "real-file" hidden = "hidden">
+                    <button type = "button" id = "custom-button">Choose a file</button>
+                    <span id = "custom-text">No file selected.</span>
+                </div>
+                <div class = "file-submit-btn">
+                    <input type="submit" id = "form-submit"/>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+      const realFileBtn = document.getElementById('real-file');
+      const customBtn = document.getElementById('custom-button'); 
+      const customTxt = document.getElementById('custom-text'); 
+      
+      customBtn.addEventListener("click", function() {
+          realFileBtn.click();
+      })
+
+      realFileBtn.addEventListener("change", function() {
+          if (realFileBtn.value) {
+              customTxt.innerHTML = realFileBtn.value.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+          }
+          else {
+              customTxt.innerHTML = "No file selected.";
+          }
+      })
+    </script>
 {% endblock %}
+
 
