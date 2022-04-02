@@ -9,6 +9,26 @@
     background-color: #edf0f1;
 }
 
+button {
+    border: 0px;
+    font-family: "montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1.25em;
+    font-weight: 700;
+    letter-spacing: 5px;
+    padding: 15px 32px;
+    color: white;
+    background-color: #FFCD73;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover {
+    background-color: #fae6c0;
+}
+
+
 li, a {
     font-family: "montserrat", sans-serif;
     font-size: 16px;
@@ -21,6 +41,7 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    border-bottom: 1px solid black; 
     padding: 30px 10%;
 }
 
@@ -56,7 +77,8 @@ ul{
 
 .home-left {
     padding: 25px; 
-    border: 1px solid black; 
+    border-right: 1px solid black; 
+    border-bottom: 1px solid black; 
     width: 50%;
     height: 90vh;
     float: left;
@@ -71,7 +93,6 @@ ul{
 .home-right-top {
     padding: 50px; 
     border-bottom: 1px solid black;
-    border-top: 1px solid black; 
     border-right: 1px solid black;  
     width: 50%;
     height: 60vh;
@@ -85,7 +106,7 @@ ul{
     font-weight: 300;
 }
 
-.home-right-top input {
+ input {
   background-color: #FFCD73;
   border: none;
   color: white;
@@ -101,7 +122,7 @@ ul{
   transition: all 0.3s ease 0s;
 }
 
-.home-right-top input:hover {
+ input:hover {
     background-color: #fae6c0;
 }
 
@@ -149,4 +170,43 @@ ul{
     font-family: "montserrat", sans-serif;
     font-weight: 300;
 }
+
+.upload-container {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload-content {
+    border: 1px solid black;
+    width: fit-content;
+    padding: 50px;
+}
+
+#custom-text {
+    font-family: "montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: #aaa;
+}
+
+.file-selector {
+    width: 100%;
+}
+
+.file-submit-btn {
+    width: 100%;
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#form-submit {
+    background-color: #fff5e2;
+    color: #24252A;
+    margin: auto;
+}
+
 
