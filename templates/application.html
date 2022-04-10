@@ -3,39 +3,20 @@
 {% block title %}{% endblock %}
 
 {% block body %}
-<!--
-    <h1 class="m-5 p-5">ABC Company</h1>
-    <div class="m-5 p-5">
-        Name:
-        <input type="text" name="name" value={{ user.name }}><br><br>
-
-        Email:
-        <input type="email" name="email" value={{ user.email }}><br><br>
-
-        Education <br><br>
-        Major:
-        <input type="text" name="major" value={{ user.email }}><br><br>
-
-
-        Expected Graduation:
-        <input type="text" name="expGrad" value={{ user.major }}><br>
-    </div>-->
-
-    <form class = "applicationForm">
+    <form class = "applicationForm" method="POST" enctype="multipart/form-data">
         <h3>Barashev form</h3>
+            <label for="name">Name</label>
+            <input class = "applicationInput" type="text" placeholder="Name" name="name" value={{ user.name }}>
 
-        <label for="name">Name</label>
-        <input class = "applicationInput" type="text" placeholder="Name" id="name" value={{ user.name }}>
+            <label for="email">Email</label>
+            <input class = "applicationInput" type="email" placeholder="Email" name="email" value={{ user.email }}>
 
-        <label for="email">Email</label>
-        <input class = "applicationInput" type="password" placeholder="Email" id="email" value={{ user.email }}>
+            <label for="education">Major</label>
+            <input class = "applicationInput" type="text" placeholder="Major" name="major" value={{ user.email }}>
 
-        <label for="education">Major</label>
-        <input class = "applicationInput" type="password" placeholder="Major" id="major" value={{ user.email }}>
+            <label for="expgrad">Expected Graduation</label>
+            <input class = "applicationInput" type="text" placeholder="Year" name="expgrad" value={{ user.major }}>
 
-        <label for="expgrad">Expected Graduation</label>
-        <input class = "applicationInput" type="password" placeholder="Year" id="expgrad" value={{ user.major }}>
-
-        <button class = "applicationButton">Submit</button>
+            <button class = "applicationButton">Submit</button>
     </form>
 {% endblock %}
